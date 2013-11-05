@@ -14,7 +14,16 @@ public class DistributionController {
 		
 		return "distribution/index";
 	}
+	@RequestMapping(value="/current", method = RequestMethod.GET)
+	public String current(){
+		
+		return "distribution/current";
+	}
 	
+	@RequestMapping(value="/config", method = RequestMethod.GET)
+	public String config(){
+		return "distribution/config";
+	}
 	@RequestMapping(value="/monitor", method = RequestMethod.GET)
 	public String monitor(Model model){
 		
