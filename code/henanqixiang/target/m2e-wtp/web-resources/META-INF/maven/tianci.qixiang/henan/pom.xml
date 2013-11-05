@@ -115,6 +115,13 @@
 			<artifactId>junit</artifactId>
 			<version>4.7</version>
 			<scope>test</scope>
+		</dependency> 
+		
+		<!-- ftp server -->
+		<dependency>
+		    <groupId>org.apache.ftpserver</groupId>
+		    <artifactId>ftpserver-core</artifactId>
+		    <version>1.0.6</version>
 		</dependency>        
 	</dependencies>
     <build>

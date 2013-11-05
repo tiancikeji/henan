@@ -5,10 +5,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 
 @Controller
-@RequestMapping(value="/gis")
 public class GisController {
 
-	@RequestMapping(value="/")
+	@RequestMapping(value="/gis")
 	public String index(){
 		return "gis/index";
 	}
