@@ -61,7 +61,8 @@
 
             <div class="wrapper">
                 <div class="main bg-map">
-                    <img src="<c:url value="/resources/images/pic/pic1.jpg"/>" alt="图" />
+                    <iframe src="http://win-79hpgpn66b4/ArcGIS/rest/services/weather1/MapServer?f=jsapi" width="100%" height="800px">
+                    </iframe>
                 </div>
             </div><!-- main -->
 
