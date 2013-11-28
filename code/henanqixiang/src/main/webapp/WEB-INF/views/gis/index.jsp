@@ -64,7 +64,8 @@
         //note that if you do not have public Internet access then you will need to point this url to your own locally accessible cached service.
 		var layer = "http://server.arcgisonline.com/ArcGIS/rest/services/NGS_Topo_US_2D/MapServer";
         //var layer = "http://win-79hpgpn66b4/ArcGIS/rest/services/world/MapServer";
-	    var myTiledMapServiceLayer = new esri.layers.ArcGISTiledMapServiceLayer(layer);
+        var layer1 = "http://win-79hpgpn66b4/ArcGIS/rest/services/weather1/MapServer";
+	    var myTiledMapServiceLayer = new esri.layers.ArcGISTiledMapServiceLayer(layer1);
 
         myMap.addLayer(myTiledMapServiceLayer);
 
