@@ -1,4 +1,4 @@
-package tianci.qixiang.henan;
+package tianci.qixiang.henan.controller;
 
 
 import org.slf4j.Logger;

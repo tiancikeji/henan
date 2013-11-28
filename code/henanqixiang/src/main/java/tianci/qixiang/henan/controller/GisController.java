@@ -1,4 +1,4 @@
-package tianci.qixiang.henan;
+package tianci.qixiang.henan.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
