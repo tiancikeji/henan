@@ -18,7 +18,9 @@
                         <th>IP</th>
                         <th>名称</th>
                         <th>目录</th>
-                        <th>创建时间</th>
+                        <th>发送类型</th>
+                        <th>状态</th>
+                        <th>操作</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -27,7 +29,16 @@
                         <td><c:out value="${dest.destIp}"/></td>
                         <td><c:out value="${dest.destName}"/></td>
                         <td><c:out value="${dest.destDir}"/></td>
-                        <td>5</td>
+                        <td><c:choose>
+							<c:when test="${dest.sendType == 0}">
+								自动
+							</c:when>
+							<c:otherwise>
+								手动
+							</c:otherwise>
+                        </c:choose></td>
+                        <td>激活中</td>
+                        <td><a href="#">发送类型</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#">状态</a></td>
                     </tr>   
                 	</c:forEach>
                 </tbody>

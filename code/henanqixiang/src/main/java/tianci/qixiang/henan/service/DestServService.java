@@ -10,4 +10,5 @@ public interface DestServService {
 	
 	List<DestServiceObj> getDestList();
 
+	List<DestServiceObj> getDestByName(String destName);
 }

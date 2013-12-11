@@ -10,4 +10,6 @@ public interface DestServiceDao {
 	
 	List<DestServiceObj> getDestList();
 	
+	List<DestServiceObj> getDestByName(String destName);
+
 }

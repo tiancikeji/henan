@@ -24,9 +24,9 @@ public class DestServiceDaoImpl implements DestServiceDao {
 	@Override
 	public void addDestService(DestServiceObj ds) {
 		JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
-		jdbcTemplate.update("insert into destservice (destip, destname, destdir, createtime) values (?, ?, ?, ?)", 
+		jdbcTemplate.update("insert into destservice (destip, destname, destdir, sendtype, createtime) values (?, ?, ?, ?, ?)", 
 				new Object[] { ds.getDestIp(), ds.getDestName(), 
-		ds.getDestDir(), new java.sql.Date(new Date().getTime())});
+		ds.getDestDir(), ds.getSendType(), new java.sql.Date(new Date().getTime())});
 
 //		jdbcTemplate.update("INSERT INTO destservice VALUES(?,?,..)",                     
 //		        new PreparedStatementSetter(){                          
@@ -50,10 +50,17 @@ public class DestServiceDaoImpl implements DestServiceDao {
 				orbit.setDestIp(rs.getString("destip"));
 				orbit.setDestName(rs.getString("destname"));
 				orbit.setDestDir(rs.getString("destdir"));
+				orbit.setSendType(rs.getInt("sendtype"));
 				return orbit;
 			}
 		});
 		return orbitList;
+	}
+
+	@Override
+	public List<DestServiceObj> getDestByName(String destName) {
+		
+		return null;
 	}
 
 	

@@ -71,9 +71,10 @@ $(function() {
     			<li class="active"><a href="<c:url value="/distribution"/>">产品分发系统</a></li>
     			<li><a href="<c:url value="/distribution/monitor"/>">发送监控</a></li>
     			<li><a href="<c:url value="/distribution/current"/>">当日发送文件结果记录</a></li>
-    			<li><a href="<c:url value="/distribution/config"/>">定时设置</a></li>
+    			<!-- <li><a href="<c:url value="/distribution/config"/>">定时设置</a></li> -->
     			<li><a href="<c:url value="/distribution/destlist"/>">目标服务器列表</a></li>
     			<li><a href="<c:url value="/distribution/destform"/>">创建目标服务器</a></li>
+    			<li><a href="<c:url value="/distribution/otherserver"/>">第三方服务列表</a></li>
     		</ul>
     	</div>
     	<div class="subnav cf">
