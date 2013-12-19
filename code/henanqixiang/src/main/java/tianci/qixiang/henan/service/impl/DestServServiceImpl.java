@@ -27,4 +27,10 @@ public class DestServServiceImpl implements DestServService {
 		return destServiceDao.getDestList();
 	}
 
+	@Override
+	public List<DestServiceObj> getDestByName(String destName) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }

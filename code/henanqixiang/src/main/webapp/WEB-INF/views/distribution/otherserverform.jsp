@@ -13,33 +13,24 @@
 		</div><!-- mod hd -->
 
     	<div class="bd">
-    		<form action="<c:url value='/distribution/destcreate'/>" method="post">
+    		<form action="<c:url value='/distribution/otherservercreate'/>" method="post">
     		<table class="form form-set">
                 <tr>
                     <th>目标IP：</th>
                     <td>
-                        <input class="ipt-txt ipt-l" type="text" name="destIp"/>
+                        <input class="ipt-txt ipt-l" type="text" name="ftpIp"/>
                     </td>
                 </tr>
                 <tr>
                     <th>目标名称：</th>
                     <td>
-                        <input class="ipt-txt ipt-l" type="text" name="destName"/>
+                        <input class="ipt-txt ipt-l" type="text" name="ftpName"/>
                     </td>
                 </tr>
                 <tr>
                     <th>目标目录：</th>
                     <td>
-                        <input class="ipt-txt ipt-l" type="text" name="destDir"/>
-                    </td>
-                </tr>
-                <tr>
-                    <th>发送方式：</th>
-                    <td>
-                        <select class="select ipt-l" name="sendType">
-                            <option value="0">自动</option>   
-                            <option value="1">手动</option>   
-                        </select>
+                        <input class="ipt-txt ipt-l" type="text" name="ftpDir"/>
                     </td>
                 </tr>
                 

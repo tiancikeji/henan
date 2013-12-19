@@ -2,14 +2,20 @@ package tianci.qixiang.henan.bean;
 
 import java.util.Date;
 
-//目标服务器对象
 public class DestServiceObj {
 
 	private String destIp;
 	private String destName;
 	private String destDir;
 	private Date createTime;
+	private int sendType;
 	
+	public int getSendType() {
+		return sendType;
+	}
+	public void setSendType(int sendType) {
+		this.sendType = sendType;
+	}
 	public String getDestIp() {
 		return destIp;
 	}

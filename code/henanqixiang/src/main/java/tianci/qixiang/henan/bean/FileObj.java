@@ -6,9 +6,8 @@ import java.util.Date;
 public class FileObj {
 
 	private String fileName;
-	private String fileType;
-	private Date uploadDate;
-	private String source;
+	private String destName;
+	private Date createtime;
 	
 	public String getFileName() {
 		return fileName;
@@ -16,23 +15,16 @@ public class FileObj {
 	public void setFileName(String fileName) {
 		this.fileName = fileName;
 	}
-	public String getFileType() {
-		return fileType;
+	public String getDestName() {
+		return destName;
 	}
-	public void setFileType(String fileType) {
-		this.fileType = fileType;
+	public void setDestName(String destName) {
+		this.destName = destName;
 	}
-	public String getSource() {
-		return source;
+	public Date getCreatetime() {
+		return createtime;
 	}
-	public void setSource(String source) {
-		this.source = source;
+	public void setCreatetime(Date createtime) {
+		this.createtime = createtime;
 	}
-	public Date getUploadDate() {
-		return uploadDate;
-	}
-	public void setUploadDate(Date uploadDate) {
-		this.uploadDate = uploadDate;
-	}
-	
 }

@@ -10,8 +10,7 @@
 		<div class="hd cf">
 			<h2>产品分发系统</h2>
 			<div class="fr">
-				<input class="btn btn-blue css3" type="button" value="刷新" />
-				<input class="btn btn-blue css3" type="button" value="手动发送" />
+				<input class="btn btn-blue css3" type="button" value="创建第三方服务" onclick='window.location.href = "<c:url value='/distribution/otherserverform'/>";'/>
 			</div>
 		</div><!-- mod hd -->
 
@@ -19,17 +18,17 @@
     		<table class="table">
                 <thead>
                     <tr>
-                        <th><input type="checkbox" /> 文件名称</th>
-                        <th>文件来源</th>
-                        <th>创建时间</th>
+                        <th><input type="checkbox" /> 服务ip</th>
+                        <th>服务名称</th>
+                        <th>服务目录</th>
                     </tr>
                 </thead>
                 <tbody>
-                	<c:forEach var="file" items="${filelist}">
+                	<c:forEach var="ftp" items="${ftplist}">
                     <tr>
-                        <td><c:out value="${file.fileName }"/></td>
-                        <td><c:out value="${file.destName }"/></td>
-                        <td></td>
+                        <td><c:out value="${ftp.ftpIp }"/></td>
+                        <td><c:out value="${ftp.ftpName }"/></td>
+                        <td><c:out value="${ftp.ftpDir }"/></td>
                     </tr>   
                     </c:forEach>
                 </tbody>
