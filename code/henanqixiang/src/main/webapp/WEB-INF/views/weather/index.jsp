@@ -34,24 +34,12 @@
                         <li><a href="#">冻雨</a></li>
                         <li><a href="#">霜冻</a></li>
                         <li><a href="#">雾</a></li>
-                        <li><a href="#">浓雾</a></li>
-                        <li><a href="#">强浓雾</a></li>
-                        <li><a href="#">中雪</a></li>
-                        <li><a href="#">大雪</a></li>
-                        <li><a href="#">暴雪</a></li>
-                        <li><a href="#">暴雨</a></li>
-                        <li><a href="#">大暴雨</a></li>
-                        <li><a href="#">特大暴雨</a></li>
+                        <li><a href="#">雪</a></li>
+                        <li><a href="#">雨</a></li>
                         <li><a href="#">沙尘暴</a></li>
-                        <li><a href="#">强沙尘暴</a></li>
-                        <li><a href="#">≥6级大风</a></li>
-                        <li><a href="#">≥8级大风</a></li>
-                        <li><a href="#">≥10级大风</a></li>
-                        <li><a href="#">≥12级大风</a></li>
-                        <li><a href="#">≥37℃高温</a></li>
-                        <li><a href="#">≥40℃高温</a></li>
-                        <li><a href="#">≥8℃强降温</a></li>
-                        <li><a href="#">≥12℃强降温</a></li>
+                        <li><a href="#">大风</a></li>
+                        <li><a href="#">高温</a></li>
+                        <li><a href="#">降温</a></li>
                     </ul>
                     <p class="btn-wrap1">
                         <input class="btn btn-blue css3" type="button" value="+ 添加灾害类型" />

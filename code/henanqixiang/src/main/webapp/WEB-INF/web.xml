@@ -14,11 +14,11 @@
 		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
 	</listener>
 	<!-- 容器 初始化监听 -->
-	<!-- 
+	
 	<listener>
-		<listener-class>tianci.qiiang.henan.utils.ftp.MyServletContextListener</listener-class>
+		<listener-class>tianci.qixiang.henan.utils.ftp.MyServletContextListener</listener-class>
 	</listener>
- 	-->
+	
 	<!-- Processes application requests -->
 	<servlet>
 		<servlet-name>appServlet</servlet-name>

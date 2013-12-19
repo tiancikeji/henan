@@ -31,9 +31,7 @@ public class MyServletContextListener implements ServletContextListener {
 
 	}
 
-	// 容器初始化
 	public void contextInitialized(ServletContextEvent sce) {
-		/* 在此如不希望容器启动里就开启FTPserver而是希望在页面通过手动开启 */
 		System.out.println("Starting FtpServer");
 
 		WebApplicationContext ctx = WebApplicationContextUtils
