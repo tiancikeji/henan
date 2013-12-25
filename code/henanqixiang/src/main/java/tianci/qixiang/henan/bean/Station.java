@@ -1,5 +1,11 @@
 package tianci.qixiang.henan.bean;
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
 public class Station {
 	private int id;
 	private String station_no;
@@ -73,4 +79,49 @@ public class Station {
 		this.file_update_flag = file_update_flag;
 	}
 	
+	public static Station read(String lineTxt) {
+		Station station = new Station();
+		String[] arr = lineTxt.split(" ");
+		station.setStation_no(arr[0]);
+		station.setOber_time(arr[1]);
+		station.setLat(arr[2]);
+		station.setLng(arr[3]);
+		station.setStation_altitude(arr[4]);
+		station.setSensor_altitude(arr[5]);
+		station.setOber_method(arr[6]);
+		station.setQuality_flag(arr[7]);
+		station.setFile_update_flag(arr[8]);
+//		System.out.println(station.getOber_time());
+		return station;
+	}
+	
+	public static Station save(Connection conn,Station station){
+		PreparedStatement stmt;
+		try {
+			stmt = conn.prepareStatement("INSERT INTO station (station_no,ober_time,lat,lng,statiion_altitude,sensor_altitude,ober_method,quality_flag,file_update_flag)"
+					+ " VALUES(?,?,?,?,?,?,?,?,?)",Statement.RETURN_GENERATED_KEYS);
+			stmt.setString(1,station.getStation_no());	
+			stmt.setString(2,station.getOber_time());
+			stmt.setString(3, station.getLat());
+			stmt.setString(4,station.getLng());
+			stmt.setString(5, station.getStation_altitude());
+			stmt.setString(6, station.getSensor_altitude());
+			stmt.setString(7, station.getOber_method());
+			stmt.setString(8,station.getQuality_flag());
+			stmt.setString(9, station.getFile_update_flag());
+			stmt.execute();
+			ResultSet rs = stmt.getGeneratedKeys();
+			if(rs.next()){
+				Long id = rs.getLong(1);
+				station.setId(id.intValue());
+				return station;
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
+		
+		
+	}
 }
