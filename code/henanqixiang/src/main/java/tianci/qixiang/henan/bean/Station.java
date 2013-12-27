@@ -10,10 +10,10 @@ public class Station {
 	private int id;
 	private String station_no;
 	private String ober_time;
-	private String lat;
-	private String lng;
-	private String station_altitude;
-	private String sensor_altitude;
+	private float lat;
+	private float lng;
+	private float station_altitude;
+	private float sensor_altitude;
 	private String ober_method;
 	private String quality_flag;
 	private String file_update_flag;
@@ -36,28 +36,32 @@ public class Station {
 	public void setOber_time(String ober_time) {
 		this.ober_time = ober_time;
 	}
-	public String getLat() {
+
+	
+	
+	
+	public float getLat() {
 		return lat;
 	}
-	public void setLat(String lat) {
+	public void setLat(float lat) {
 		this.lat = lat;
 	}
-	public String getLng() {
+	public float getLng() {
 		return lng;
 	}
-	public void setLng(String lng) {
+	public void setLng(float lng) {
 		this.lng = lng;
 	}
-	public String getStation_altitude() {
+	public float getStation_altitude() {
 		return station_altitude;
 	}
-	public void setStation_altitude(String station_altitude) {
+	public void setStation_altitude(float station_altitude) {
 		this.station_altitude = station_altitude;
 	}
-	public String getSensor_altitude() {
+	public float getSensor_altitude() {
 		return sensor_altitude;
 	}
-	public void setSensor_altitude(String sensor_altitude) {
+	public void setSensor_altitude(float sensor_altitude) {
 		this.sensor_altitude = sensor_altitude;
 	}
 	public String getOber_method() {
@@ -84,10 +88,17 @@ public class Station {
 		String[] arr = lineTxt.split(" ");
 		station.setStation_no(arr[0]);
 		station.setOber_time(arr[1]);
-		station.setLat(arr[2]);
-		station.setLng(arr[3]);
-		station.setStation_altitude(arr[4]);
-		station.setSensor_altitude(arr[5]);
+
+		double lat = Double.parseDouble(arr[2].substring(0, 2))+Double.parseDouble(arr[2].substring(2, 4))/60+Double.parseDouble(arr[2].substring(4, 6))/3600;
+		
+		station.setLat((float) lat);
+
+		double lng = Double.parseDouble(arr[3].substring(0, 3))+Double.parseDouble(arr[3].substring(3, 5))/60+Double.parseDouble(arr[3].substring(5, 7))/3600;
+		station.setLng((float) lng);
+		
+		
+		station.setStation_altitude(Float.parseFloat(arr[4]));
+		station.setSensor_altitude(Float.parseFloat(arr[5]));
 		station.setOber_method(arr[6]);
 		station.setQuality_flag(arr[7]);
 		station.setFile_update_flag(arr[8]);
@@ -102,10 +113,10 @@ public class Station {
 					+ " VALUES(?,?,?,?,?,?,?,?,?)",Statement.RETURN_GENERATED_KEYS);
 			stmt.setString(1,station.getStation_no());	
 			stmt.setString(2,station.getOber_time());
-			stmt.setString(3, station.getLat());
-			stmt.setString(4,station.getLng());
-			stmt.setString(5, station.getStation_altitude());
-			stmt.setString(6, station.getSensor_altitude());
+			stmt.setFloat(3, station.getLat());
+			stmt.setFloat(4,station.getLng());
+			stmt.setFloat(5, station.getStation_altitude());
+			stmt.setFloat(6, station.getSensor_altitude());
 			stmt.setString(7, station.getOber_method());
 			stmt.setString(8,station.getQuality_flag());
 			stmt.setString(9, station.getFile_update_flag());
@@ -124,4 +135,15 @@ public class Station {
 		
 		
 	}
+	
+	public static void main(String argv[]) {
+		String lnt = "342700";
+		String lng = "1162000";
+		System.out.println(lnt.length());
+		if(lnt.length()==6){
+		}
+		
+		System.out.println(lng.length());
+	}
+	
 }

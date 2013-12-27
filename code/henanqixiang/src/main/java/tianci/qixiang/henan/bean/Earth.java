@@ -8,26 +8,28 @@ public class Earth {
 	private int id;
 	private int station_id;
 	private int station_code;
-	private String temp;
-	private String highest;
-	private String highesttime;
-	private String lowest;
-	private String lowesttime;
-	private String last12lowest;
-	private String _5cm;
-	private String _10cm;
-	private String _15cm;
-	private String _20cm;
-	private String _40cm;
-	private String _80cm;
-	private String _160cm;
-	private String _320cm;
-	private String gossy;
-	private String gossyhighest;
-	private String gossyhighesttime;
-	private String gossylowest;
-	private String gossylowesttime;
+	private float temp;
+	private float highest;
+	private float highesttime;
+	private float lowest;
+	private float lowesttime;
+	private float last12lowest;
+	private float _5cm;
+	private float _10cm;
+	private float _15cm;
+	private float _20cm;
+	private float _40cm;
+	private float _80cm;
+	private float _160cm;
+	private float _320cm;
+	private float gossy;
+	private float gossyhighest;
+	private float gossyhighesttime;
+	private float gossylowest;
+	private float gossylowesttime;
 
+
+	
 	public int getId() {
 		return id;
 	}
@@ -52,180 +54,180 @@ public class Earth {
 		this.station_code = station_code;
 	}
 
-	public String getTemp() {
+	public float getTemp() {
 		return temp;
 	}
 
-	public void setTemp(String temp) {
+	public void setTemp(float temp) {
 		this.temp = temp;
 	}
 
-	public String getHighest() {
+	public float getHighest() {
 		return highest;
 	}
 
-	public void setHighest(String highest) {
+	public void setHighest(float highest) {
 		this.highest = highest;
 	}
 
-	public String getHighesttime() {
+	public float getHighesttime() {
 		return highesttime;
 	}
 
-	public void setHighesttime(String highesttime) {
+	public void setHighesttime(float highesttime) {
 		this.highesttime = highesttime;
 	}
 
-	public String getLowest() {
+	public float getLowest() {
 		return lowest;
 	}
 
-	public void setLowest(String lowest) {
+	public void setLowest(float lowest) {
 		this.lowest = lowest;
 	}
 
-	public String getLowesttime() {
+	public float getLowesttime() {
 		return lowesttime;
 	}
 
-	public void setLowesttime(String lowesttime) {
+	public void setLowesttime(float lowesttime) {
 		this.lowesttime = lowesttime;
 	}
 
-	public String getLast12lowest() {
+	public float getLast12lowest() {
 		return last12lowest;
 	}
 
-	public void setLast12lowest(String last12lowest) {
+	public void setLast12lowest(float last12lowest) {
 		this.last12lowest = last12lowest;
 	}
 
-	public String get_5cm() {
+	public float get_5cm() {
 		return _5cm;
 	}
 
-	public void set_5cm(String _5cm) {
+	public void set_5cm(float _5cm) {
 		this._5cm = _5cm;
 	}
 
-	public String get_10cm() {
+	public float get_10cm() {
 		return _10cm;
 	}
 
-	public void set_10cm(String _10cm) {
+	public void set_10cm(float _10cm) {
 		this._10cm = _10cm;
 	}
 
-	public String get_15cm() {
+	public float get_15cm() {
 		return _15cm;
 	}
 
-	public void set_15cm(String _15cm) {
+	public void set_15cm(float _15cm) {
 		this._15cm = _15cm;
 	}
 
-	public String get_20cm() {
+	public float get_20cm() {
 		return _20cm;
 	}
 
-	public void set_20cm(String _20cm) {
+	public void set_20cm(float _20cm) {
 		this._20cm = _20cm;
 	}
 
-	public String get_40cm() {
+	public float get_40cm() {
 		return _40cm;
 	}
 
-	public void set_40cm(String _40cm) {
+	public void set_40cm(float _40cm) {
 		this._40cm = _40cm;
 	}
 
-	public String get_80cm() {
+	public float get_80cm() {
 		return _80cm;
 	}
 
-	public void set_80cm(String _80cm) {
+	public void set_80cm(float _80cm) {
 		this._80cm = _80cm;
 	}
 
-	public String get_160cm() {
+	public float get_160cm() {
 		return _160cm;
 	}
 
-	public void set_160cm(String _160cm) {
+	public void set_160cm(float _160cm) {
 		this._160cm = _160cm;
 	}
 
-	public String get_320cm() {
+	public float get_320cm() {
 		return _320cm;
 	}
 
-	public void set_320cm(String _320cm) {
+	public void set_320cm(float _320cm) {
 		this._320cm = _320cm;
 	}
 
-	public String getGossy() {
+	public float getGossy() {
 		return gossy;
 	}
 
-	public void setGossy(String gossy) {
+	public void setGossy(float gossy) {
 		this.gossy = gossy;
 	}
 
-	public String getGossyhighest() {
+	public float getGossyhighest() {
 		return gossyhighest;
 	}
 
-	public void setGossyhighest(String gossyhighest) {
+	public void setGossyhighest(float gossyhighest) {
 		this.gossyhighest = gossyhighest;
 	}
 
-	public String getGossyhighesttime() {
+	public float getGossyhighesttime() {
 		return gossyhighesttime;
 	}
 
-	public void setGossyhighesttime(String gossyhighesttime) {
+	public void setGossyhighesttime(float gossyhighesttime) {
 		this.gossyhighesttime = gossyhighesttime;
 	}
 
-	public String getGossylowest() {
+	public float getGossylowest() {
 		return gossylowest;
 	}
 
-	public void setGossylowest(String gossylowest) {
+	public void setGossylowest(float gossylowest) {
 		this.gossylowest = gossylowest;
 	}
 
-	public String getGossylowesttime() {
+	public float getGossylowesttime() {
 		return gossylowesttime;
 	}
 
-	public void setGossylowesttime(String gossylowesttime) {
+	public void setGossylowesttime(float gossylowesttime) {
 		this.gossylowesttime = gossylowesttime;
 	}
 
 	public static Earth read(String lineTxt) {
 		Earth earth = new Earth();
 		String[] arr = lineTxt.split(" ");
-		earth.setTemp(arr[1]);
-		earth.setHighest(arr[2]);
-		earth.setHighesttime(arr[3]);
-		earth.setLowest(arr[4]);
-		earth.setLowesttime(arr[5]);
-		earth.setLast12lowest(arr[6]);
-		earth.set_5cm(arr[7]);
-		earth.set_10cm(arr[8]);
-		earth.set_15cm(arr[9]);
-		earth.set_20cm(arr[10]);
-		earth.set_40cm(arr[11]);
-		earth.set_80cm(arr[12]);
-		earth.set_160cm(arr[13]);
-		earth.set_320cm(arr[14]);
-		earth.setGossy(arr[15]);
-		earth.setGossyhighest(arr[16]);
-		earth.setGossyhighesttime(arr[17]);
-		earth.setGossylowest(arr[18]);
-		earth.setGossylowesttime(arr[19]);
+		earth.setTemp(Float.parseFloat((arr[1].contains("//"))?"0":arr[1]));
+		earth.setHighest(Float.parseFloat((arr[2].contains("//"))?"0":arr[2]));
+		earth.setHighesttime(Float.parseFloat((arr[3].contains("//"))?"0":arr[3]));
+		earth.setLowest(Float.parseFloat((arr[4].contains("//"))?"0":arr[4]));
+		earth.setLowesttime(Float.parseFloat((arr[5].contains("//"))?"0":arr[5]));
+		earth.setLast12lowest(Float.parseFloat((arr[6].contains("//"))?"0":arr[6]));
+		earth.set_5cm(Float.parseFloat((arr[7].contains("//"))?"0":arr[7]));
+		earth.set_10cm(Float.parseFloat((arr[8].contains("//"))?"0":arr[8]));
+		earth.set_15cm(Float.parseFloat((arr[9].contains("//"))?"0":arr[9]));
+		earth.set_20cm(Float.parseFloat((arr[10].contains("//"))?"0":arr[10]));
+		earth.set_40cm(Float.parseFloat((arr[11].contains("//"))?"0":arr[11]));
+		earth.set_80cm(Float.parseFloat((arr[12].contains("//"))?"0":arr[12]));
+		earth.set_160cm(Float.parseFloat((arr[13].contains("//"))?"0":arr[13]));
+		earth.set_320cm(Float.parseFloat((arr[14].contains("//"))?"0":arr[14]));
+		earth.setGossy(Float.parseFloat((arr[15].contains("//"))?"0":arr[15]));
+		earth.setGossyhighest(Float.parseFloat((arr[16].contains("//"))?"0":arr[16]));
+		earth.setGossyhighesttime(Float.parseFloat((arr[17].contains("//"))?"0":arr[17]));
+		earth.setGossylowest(Float.parseFloat((arr[18].contains("//"))?"0":arr[18]));
+		earth.setGossylowesttime(Float.parseFloat((arr[19].contains("//"))?"0":arr[19]));
 		return earth;
 	}
 
@@ -241,25 +243,25 @@ public class Earth {
 			stmt = conn.prepareStatement(sql);
 			stmt.setInt(1, earth.getStation_id());
 			stmt.setInt(2, earth.getStation_code());
-			stmt.setString(3, earth.getTemp());
-			stmt.setString(4, earth.getHighest());
-			stmt.setString(5, earth.getHighesttime());
-			stmt.setString(6, earth.getLowest());
-			stmt.setString(7, earth.getLowesttime());
-			stmt.setString(8, earth.getLast12lowest());
-			stmt.setString(9, earth.get_5cm());
-			stmt.setString(10, earth.get_10cm());
-			stmt.setString(11, earth.get_15cm());
-			stmt.setString(12,earth.get_20cm());
-			stmt.setString(13,earth.get_40cm());
-			stmt.setString(14, earth.get_80cm());
-			stmt.setString(15, earth.get_160cm());
-			stmt.setString(16, earth.get_320cm());
-			stmt.setString(17, earth.getGossy());
-			stmt.setString(18, earth.getGossyhighest());
-			stmt.setString(19, earth.getGossyhighesttime());
-			stmt.setString(20, earth.getGossylowest());
-			stmt.setString(21, earth.getGossylowesttime());
+			stmt.setFloat(3, earth.getTemp());
+			stmt.setFloat(4, earth.getHighest());
+			stmt.setFloat(5, earth.getHighesttime());
+			stmt.setFloat(6, earth.getLowest());
+			stmt.setFloat(7, earth.getLowesttime());
+			stmt.setFloat(8, earth.getLast12lowest());
+			stmt.setFloat(9, earth.get_5cm());
+			stmt.setFloat(10, earth.get_10cm());
+			stmt.setFloat(11, earth.get_15cm());
+			stmt.setFloat(12,earth.get_20cm());
+			stmt.setFloat(13,earth.get_40cm());
+			stmt.setFloat(14, earth.get_80cm());
+			stmt.setFloat(15, earth.get_160cm());
+			stmt.setFloat(16, earth.get_320cm());
+			stmt.setFloat(17, earth.getGossy());
+			stmt.setFloat(18, earth.getGossyhighest());
+			stmt.setFloat(19, earth.getGossyhighesttime());
+			stmt.setFloat(20, earth.getGossylowest());
+			stmt.setFloat(21, earth.getGossylowesttime());
 			stmt.execute();
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block

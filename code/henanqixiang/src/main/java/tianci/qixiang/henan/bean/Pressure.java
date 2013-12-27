@@ -9,13 +9,13 @@ public class Pressure {
 	private Integer id;
 	private Integer station_id;
 	private Integer station_code;
-	private String station;
-	private String sealevel;
-	private String threehours;
-	private String twentyfourhours;
-	private String highest;
+	private float station;
+	private float sealevel;
+	private float threehours;
+	private float twentyfourhours;
+	private float highest;
 	private String highesttime;
-	private String lowest;
+	private float lowest;
 	private String lowesttime;
 
 	public Integer getId() {
@@ -42,44 +42,53 @@ public class Pressure {
 		this.station_code = station_code;
 	}
 
-	public String getStation() {
+
+	public float getStation() {
 		return station;
 	}
 
-	public void setStation(String station) {
+	public void setStation(float station) {
 		this.station = station;
 	}
 
-	public String getSealevel() {
+	public float getSealevel() {
 		return sealevel;
 	}
 
-	public void setSealevel(String sealevel) {
+	public void setSealevel(float sealevel) {
 		this.sealevel = sealevel;
 	}
 
-	public String getThreehours() {
+	public float getThreehours() {
 		return threehours;
 	}
 
-	public void setThreehours(String threehours) {
+	public void setThreehours(float threehours) {
 		this.threehours = threehours;
 	}
 
-	public String getTwentyfourhours() {
+	public float getTwentyfourhours() {
 		return twentyfourhours;
 	}
 
-	public void setTwentyfourhours(String twentyfourhours) {
+	public void setTwentyfourhours(float twentyfourhours) {
 		this.twentyfourhours = twentyfourhours;
 	}
 
-	public String getHighest() {
+	public float getHighest() {
 		return highest;
 	}
 
-	public void setHighest(String highest) {
+	public void setHighest(float highest) {
 		this.highest = highest;
+	}
+
+	public float getLowest() {
+		return lowest;
+	}
+
+	public void setLowest(float lowest) {
+		this.lowest = lowest;
 	}
 
 	public String getHighesttime() {
@@ -90,13 +99,6 @@ public class Pressure {
 		this.highesttime = highesttime;
 	}
 
-	public String getLowest() {
-		return lowest;
-	}
-
-	public void setLowest(String lowest) {
-		this.lowest = lowest;
-	}
 
 	public String getLowesttime() {
 		return lowesttime;
@@ -109,13 +111,13 @@ public class Pressure {
 	public static Pressure read(String lineTxt){
 		Pressure pressure = new Pressure();
 		String[] arr = lineTxt.split(" ");
-		pressure.setStation(arr[1]);
-		pressure.setSealevel(arr[2]);
-		pressure.setThreehours(arr[3]);
-		pressure.setTwentyfourhours(arr[4]);
-		pressure.setHighest(arr[5]);
+		pressure.setStation(Float.parseFloat((arr[1].contains("PPC"))?"0":arr[1]));
+		pressure.setSealevel(Float.parseFloat((arr[2].contains("//"))?"0":arr[2]));
+		pressure.setThreehours(Float.parseFloat((arr[3].contains("//"))?"0":arr[3]));
+		pressure.setTwentyfourhours(Float.parseFloat((arr[4].contains("//"))?"0":arr[4]));
+		pressure.setHighest(Float.parseFloat((arr[5].contains("//"))?"0":arr[5]));
 		pressure.setHighesttime(arr[6]);
-		pressure.setLowest(arr[7]);
+		pressure.setLowest(Float.parseFloat((arr[7].contains("//"))?"0":arr[7]));
 		pressure.setLowesttime(arr[8]);
 		return pressure;
 	}
@@ -129,13 +131,13 @@ public class Pressure {
 			stmt = conn.prepareStatement(sql);
 			stmt.setInt(1, pressure.getStation_id());
 			stmt.setInt(2,pressure.getStation_code());
-			stmt.setString(3, pressure.getStation());
-			stmt.setString(4, pressure.getSealevel());
-			stmt.setString(5, pressure.getThreehours());
-			stmt.setString(6, pressure.getTwentyfourhours());
-			stmt.setString(7, pressure.getHighest());
+			stmt.setFloat(3, pressure.getStation());
+			stmt.setFloat(4, pressure.getSealevel());
+			stmt.setFloat(5, pressure.getThreehours());
+			stmt.setFloat(6, pressure.getTwentyfourhours());
+			stmt.setFloat(7, pressure.getHighest());
 			stmt.setString(8, pressure.getHighesttime());
-			stmt.setString(9, pressure.getLowest());
+			stmt.setFloat(9, pressure.getLowest());
 			stmt.setString(10, pressure.getLowesttime());
 			stmt.execute();
 		} catch (SQLException e) {
